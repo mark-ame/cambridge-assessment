@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row justify-content-between">
+    <h1>Articles</h1>
+    <h2>Hello, {{ userName }}</h2>
+  </div>
+  <app-search (searchEvent)="updateResults($event)"></app-search>
+  <div class="row">
+    <ng-container *ngIf="articleList | async as articles">
+      <ng-container *ngFor="let article of articles; let i = index">
+        <div class="col-md-4 col-sm-12 mb-2">
+          <app-article [article]="article"></app-article>
+        </div>
+      </ng-container>
+    </ng-container>
+  </div>
+  <div class="fixed-bottom d-flex justify-content-end mx-5 my-3">
+    <button mat-fab color="primary" (click)="onAdd()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+</div>

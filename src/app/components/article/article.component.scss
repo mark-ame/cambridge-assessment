@@ -1,0 +1,15 @@
+.action-button {
+  display: none;
+}
+
+.mat-card:hover {
+  .action-button {
+    display: block;
+  }
+}
+
+.mat-icon {
+  width: 15px;
+  height: 15px;
+  font-size: 15px;
+}

@@ -1,0 +1,13 @@
+<div class="rowm mb-3">
+  <div class="d-flex my-2 w-100" [formGroup]="searchForm">
+    <input type="text" placeholder="Search articles" class="w-100 mr-2" formControlName="keyword"/>
+    <select class="custom-select w-25 mr-2" formControlName="filter">
+      <option selected value="0">Any</option>
+      <option value="1">Title</option>
+      <option value="2">Description</option>
+    </select>
+    <div class="align-self-center">
+      <button type="button" class="btn btn-primary" (click)="search()">Search</button>
+    </div>
+  </div>
+</div>
