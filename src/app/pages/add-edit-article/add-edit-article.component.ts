@@ -87,10 +87,11 @@ export class AddEditArticleComponent implements OnInit {
   private createArticle(): void {
     this.articleService.addArticle(this.form.value)
     .subscribe({
-      next: (v) => {
+      next: (res) => {
         this._snackBar.open(this.confirmationMessage, '', {
           duration: 2000
         })
+        console.log(res);
         this.form.reset();
       },
       error: (e) => {
@@ -104,10 +105,11 @@ export class AddEditArticleComponent implements OnInit {
   private updateArticle(): void {
     this.articleService.updateArticle(this.form.value)
     .subscribe({
-      next: (v) => {
+      next: (res) => {
         this._snackBar.open(this.confirmationMessage, '', {
           duration: 2000
         })
+        console.log(res);
       },
       error: (e) => {
         this._snackBar.open('Error updating article.', '', {
