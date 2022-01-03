@@ -11,6 +11,9 @@
           <app-article [article]="article"></app-article>
         </div>
       </ng-container>
+      <ng-container *ngIf="articles.length === 0">
+        <p>No Articles</p>
+      </ng-container>
     </ng-container>
   </div>
   <div class="fixed-bottom d-flex justify-content-end mx-5 my-3">

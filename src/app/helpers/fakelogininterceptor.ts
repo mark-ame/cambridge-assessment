@@ -3,8 +3,8 @@ import { HttpInterceptor, HttpEvent, HttpResponse, HttpRequest, HttpHandler } fr
 import { Observable, of, throwError } from 'rxjs';
 
 let userCreds = {
-  username: '1',
-  password: '1'
+  username: 'testuser',
+  password: 'abc123'
 }
 @Injectable()
 export class FakeLoginInterceptor implements HttpInterceptor {
