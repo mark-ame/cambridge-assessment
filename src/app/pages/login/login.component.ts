@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
-    private authService: AuthService,
+    public authService: AuthService,
   ) { }
 
   ngOnInit(): void {
@@ -29,14 +29,14 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  login(): void {
+  async login() {
     this.isError = false;
     // stop here if form is invalid
     if (this.loginForm.invalid) {
       return;
     }
 
-    this.authService.login(this.username.value, this.password.value)
+    await this.authService.login(this.username.value, this.password.value)
       .subscribe({
         next: (v) => {
           this.router.navigate(['home']);

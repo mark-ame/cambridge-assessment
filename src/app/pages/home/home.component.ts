@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    const user = JSON.parse(localStorage.getItem('currentUser') || '');
+    const user = JSON.parse(localStorage.getItem('currentUser') || '{}');
     this.userName = user.username;
     this.articleList = this.articleService.getArticles();
   }

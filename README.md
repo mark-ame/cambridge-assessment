@@ -19,6 +19,8 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+I updated mainly the login.component.spec.ts. This is what I can accomplish right now since Im on vacation.
+I dont have prior knowledge to automated testing.
 
 ## Running end-to-end tests
 

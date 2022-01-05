@@ -35,7 +35,8 @@ export class SearchComponent implements OnInit {
 
   buildQuery(): string {
     let queryProp = ''
-    switch (this.filter.value) {
+    let val = parseInt(this.filter.value);
+    switch (val) {
       case 1:
         queryProp = 'title_like'
         break;
